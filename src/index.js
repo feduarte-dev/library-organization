@@ -2,7 +2,7 @@ const { books } = require('../data/library');
 
 // Requisito 1
 const fantasyOrScienceFiction = () => {
-  // escreva seu código aqui
+  
 };
 
 const oldBooksOrdered = (year) => {
