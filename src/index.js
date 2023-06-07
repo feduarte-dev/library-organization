@@ -21,12 +21,11 @@ const booksByAuthorBirthYear = (birthYear) => books
 const fantasyOrScienceFictionAuthors = () => fantasyOrScienceFiction()
   .map((book) => book.author.name).sort();
 
-console.log(fantasyOrScienceFictionAuthors());
+// Requisito 5
+const oldBooks = (year) => books.filter((book) => year - book.releaseYear > 60)
+  .map((book) => book.name);
 
-const oldBooks = (year) => {
-  // escreva seu código aqui
-};
-
+console.log(oldBooks(2022));
 const authorWith3DotsOnName = () => {
   // escreva seu código aqui
 };
