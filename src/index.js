@@ -6,29 +6,17 @@ const fantasyOrScienceFiction = () =>
     (book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica',
   );
 
+// Requisito 2
 const oldBooksOrdered = (year) =>
   books
     .filter((book) => year - book.releaseYear > 60)
     .sort((bookA, bookB) => bookA.releaseYear - bookB.releaseYear);
 
-// const filterOldBooks = (year) => {
-//   return books.filter((book) => {
-//     const oldBooks = year - book.releaseYear > 60;
-//     return oldBooks;
-//   });
-// };
+// Requisito 3
+const booksByAuthorBirthYear = (birthYear) => books
+  .filter((book) => book.author.birthYear === birthYear)
+  .map((livro) => livro.name);
 
-// const oldBooksOrdered = (year) => {
-//   return filterOldBooks(year).sort((a, b) => {
-//     return a.releaseYear - b.releaseYear;
-//   });
-// };
-
-console.log(oldBooksOrdered(2020));
-
-const booksByAuthorBirthYear = (birthYear) => {
-  // escreva seu código aqui
-};
 
 const fantasyOrScienceFictionAuthors = () => {
   // escreva seu código aqui
