@@ -13,23 +13,26 @@ const oldBooksOrdered = (year) =>
     .sort((bookA, bookB) => bookA.releaseYear - bookB.releaseYear);
 
 // Requisito 3
-const booksByAuthorBirthYear = (birthYear) => books
-  .filter((book) => book.author.birthYear === birthYear)
-  .map((livro) => livro.name);
+const booksByAuthorBirthYear = (birthYear) =>
+  books
+    .filter((book) => book.author.birthYear === birthYear)
+    .map((livro) => livro.name);
 
 // Requisito 4
-const fantasyOrScienceFictionAuthors = () => fantasyOrScienceFiction()
-  .map((book) => book.author.name).sort();
+const fantasyOrScienceFictionAuthors = () =>
+  fantasyOrScienceFiction()
+    .map((book) => book.author.name)
+    .sort();
 
 // Requisito 5
-const oldBooks = (year) => books.filter((book) => year - book.releaseYear > 60)
-  .map((book) => book.name);
+const oldBooks = (year) =>
+  books.filter((book) => year - book.releaseYear > 60).map((book) => book.name);
 
-console.log(oldBooks(2022));
-const authorWith3DotsOnName = () => {
-  // escreva seu código aqui
-};
+// Requisito 6 -- Olhei no gabarito
+const authorWith3DotsOnName = () => books.find((book) => book.author.name.split(' ')
+  .filter((word) => word.endsWith('.')).length === 3).name;
 
+console.log(authorWith3DotsOnName());
 module.exports = {
   fantasyOrScienceFiction,
   oldBooksOrdered,
